@@ -188,7 +188,15 @@ function techpro_nav() {
 }
 add_filter('techpro_nav','techpro_nav');
 
+function techpro_nav_fixed() {
+	wp_nav_menu( array('theme_location'=>"primary",  'menu_class' => 'fixed-menu-ul',  'echo' => true, 'depth' => 1));
+}
+add_filter('techpro_nav_fixed','techpro_nav_fixed');
 
+function techpro_nav_mobile() {
+	wp_nav_menu( array('theme_location'=>"mobile",  'menu_class' => 'mobile',  'echo' => true, 'depth' => 2));
+}
+add_filter('techpro_nav_mobile','techpro_nav_mobile');
 
 function techpro_socials() { ?>
 	<ul class="social"> <?php
