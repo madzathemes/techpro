@@ -87,25 +87,6 @@ function techpro_import_files() {
             'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/import/demo1/customizer.dat',
             'import_notice'                => esc_html__( 'Customize this theme from Appearance/Customize', 'techpro' ),
         ),
-				array(
-            'import_file_name'             => esc_html__( 'techpro - Style & Pages', 'techpro' ),
-						'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/import/demo1/pages.xml',
-            'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/import/demo1/customizer.dat',
-            'import_notice'                => esc_html__( 'Customize this theme from Appearance/Customize', 'techpro' ),
-        ),
-				array(
-            'import_file_name'             => esc_html__( 'BoomCraft Full', 'techpro' ),
-            'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/import/demo2/demo.xml',
-            'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'inc/import/demo2/widgets.json',
-            'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/import/demo2/customizer.dat',
-            'import_notice'                => esc_html__( 'Customize this theme from Appearance/Customize', 'techpro' ),
-        ),
-				array(
-            'import_file_name'             => esc_html__( 'BoomCraft - Style & Pages', 'techpro' ),
-						'local_import_file'            => trailingslashit( get_template_directory() ) . 'inc/import/demo2/pages.xml',
-            'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'inc/import/demo2/customizer.dat',
-            'import_notice'                => esc_html__( 'Customize this theme from Appearance/Customize', 'techpro' ),
-        ),
     );
 }
 add_filter( 'pt-ocdi/import_files', 'techpro_import_files' );
