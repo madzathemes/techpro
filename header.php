@@ -33,8 +33,6 @@ if(!empty($style)){
 <?php } ?>
 <div class="mt-smart-menu-out"></div>
 
-<?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); if ( is_plugin_active( 'magazine-themes-bar/magazine-themes-bar.php' ) ) { magazine_themes_bar(); } ?>
-
 <div class="mt-outer-wrap mt-fixed-wrap">
 	<?php	if(!empty( $option['menu_share'])){	techpro_header_share();	} ?>
 	<?php techpro_header_fixed(); ?>
