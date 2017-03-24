@@ -901,6 +901,7 @@ ul.sf-menu ul ul, div.sf-menu ul ul ul  {
 /*** DEMO SKIN ***/
 .sf-menu {
 	float: left;
+  padding: 0 15px;
 }
 ul.sf-menu ul, div.sf-menu ul ul {
 	min-width: 12em; /* allow long menu items to determine submenu width */
@@ -1011,7 +1012,7 @@ ul.sf-menu > li > ul > li:hover > ul, div.sf-menu > ul > li > ul > li:hover > ul
 }
 ul.sf-menu > li,
 div.sf-menu ul > li {
-  margin-left:20px;
+  margin-left:15px;
   margin-right:15px;
 }
 .sf-menu li {
@@ -1269,8 +1270,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   list-style: none;
   float: right;
   margin:0px;
-  padding-left: 0px;
-  margin-right: 10px;
+  padding: 0 15px;
 }
 .top-nav .social li {
   display: inline-block;

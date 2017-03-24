@@ -1,4 +1,5 @@
 <?php function techpro_header() {
+if ( false == get_theme_mod( 't_p_to_search', false ) ) { $t_p_to_search = esc_html__("To search type and hit enter", "techpro");  } else { $t_p_to_search = get_theme_mod( 't_p_to_search' ); }
 $allowed_html = array('ins' => array( 'class' => array(), 'style' => array(),'data-ad-client' => array(),'data-ad-slot' => array(),'data-ad-format' => array()), 'iframe' => array( 'id' => array(),'name' => array(),'src' => array(),'style' => array(),'scrolling' => array(),'frameborder' => array()), 'script' => array( 'async' => array(), 'type' => array(),'src' => array()), 'noscript' => array(), 'small' => array( 'class' => array()), 'img' => array( 'src' => array(), 'alt' => array(), 'class' => array(), 'width' => array(), 'height' => array() ), 'a' => array( 'href' => array(), 'title' => array() ), 'br' => array(), 'i' => array('class' => array()),  'em' => array(), 'strong' => array(), 'div' => array('class' => array()), 'span' => array('class' => array()));
 $option = get_option("techpro_theme_options");
 $optioz = get_option("magazin_theme_options");
@@ -39,7 +40,7 @@ else if(!empty($option['menu_background_width'])) {
 			<div class="nav-search pointer"></div>
 			<div class="nav-search-input mt-radius">
 				<form method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>/">
-					<input type="text" placeholder="<?php esc_html_e( 'Type and hit enter to search ...', 'techpro' ); ?>"  name="s" >
+					<input type="text" placeholder="<?php echo esc_html($t_p_to_search); ?>"  name="s" >
 				</form>
 			</div>
 		</div>
@@ -89,9 +90,11 @@ else if(!empty($option['menu_background_width'])) {
 							</div>
 						</div>
 
-						<div class="nav pull-left menu-background mt-radius" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" >
+						<div class="nav pull-left" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" >
 							<?php techpro_nav(); ?>
-							<?php techpro_socials(); ?>
+							<div class="pull-right menu-background mt-radius">
+								<?php techpro_socials(); ?>
+							</div>
 						</div>
 
 						<?php if(!empty($option['menu_search'])) { if($option['menu_search']=="1") { ?>
@@ -100,7 +103,7 @@ else if(!empty($option['menu_background_width'])) {
 								<div class="nav-search pointer"></div>
 								<div class="nav-search-input mt-radius">
 									<form method="get" action="<?php echo esc_url(home_url('/')); ?>/">
-										<input type="text" placeholder="<?php esc_html_e( 'Type and hit enter to search ...', 'techpro' ); ?>"  name="s" >
+										<input type="text" placeholder="<?php echo esc_html($t_p_to_search); ?>"  name="s" >
 									</form>
 								</div>
 							</div>
@@ -115,11 +118,18 @@ else if(!empty($option['menu_background_width'])) {
 
 
 function techpro_top_content() { $option = get_option("techpro_theme_options"); ?>
+<?php
+if ( false == get_theme_mod( 't_o_latest', false ) ) { $t_o_latest = esc_html__("LATEST", "techpro");  } else { $t_o_latest = get_theme_mod( 't_o_latest' ); }
+if ( false == get_theme_mod( 't_o_popular', false ) ) { $t_o_popular = esc_html__("POPULAR", "techpro");  } else { $t_o_popular = get_theme_mod( 't_o_popular' ); }
+if ( false == get_theme_mod( 't_o_hot', false ) ) { $t_o_hot = esc_html__("HOT", "techpro");  } else { $t_o_hot = get_theme_mod( 't_o_hot' ); }
+if ( false == get_theme_mod( 't_o_trending', false ) ) { $t_o_trending = esc_html__("TRENDING", "techpro");  } else { $t_o_trending = get_theme_mod( 't_o_trending' ); }
+if ( false == get_theme_mod( 't_o_posts', false ) ) { $t_o_posts = esc_html__("Posts", "techpro");  } else { $t_o_posts = get_theme_mod( 't_o_posts' ); }
+?>
 		<div class="head-nav">
-			<?php if(!empty($option['url_latest'])) { ?><a class="mt_l_latest <?php if($option['url_latest']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_latest'])); ?>"><?php esc_html_e( 'LATEST', 'techpro' ); ?> <span><?php esc_html_e( 'Posts', 'techpro' ); ?></span></a><?php } ?>
-			<?php if(!empty($option['url_popular'])) { ?><a class="mt_l_popular <?php if($option['url_popular']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_popular'])); ?>"><?php esc_html_e( 'POPULAR', 'techpro' ); ?> <span><?php esc_html_e( 'Posts', 'techpro' ); ?></span></a><?php } ?>
-			<?php if(!empty($option['url_hot'])) { ?><a class="mt_l_hot <?php if($option['url_hot']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_hot'])); ?>"><?php esc_html_e( 'HOT', 'techpro' ); ?> <span><?php esc_html_e( 'Posts', 'techpro' ); ?></span></a><?php } ?>
-			<?php if(!empty($option['url_trending'])) { ?>	<a class="mt_l_trending <?php if($option['url_trending']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_trending'])); ?>"><?php esc_html_e( 'TRENDING', 'techpro' ); ?> <span><?php esc_html_e( 'Posts', 'techpro' ); ?></span></a><?php } ?>
+			<?php if(!empty($option['url_latest'])) { ?><a class="mt_l_latest <?php if($option['url_latest']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_latest'])); ?>"><?php echo esc_html($t_o_latest); ?> <span><?php echo esc_html($t_o_posts); ?></span></a><?php } ?>
+			<?php if(!empty($option['url_popular'])) { ?><a class="mt_l_popular <?php if($option['url_popular']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_popular'])); ?>"><?php echo esc_html($t_o_popular); ?> <span><?php echo esc_html($t_o_posts); ?></span></a><?php } ?>
+			<?php if(!empty($option['url_hot'])) { ?><a class="mt_l_hot <?php if($option['url_hot']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_hot'])); ?>"><?php echo esc_html($t_o_hot); ?> <span><?php echo esc_html($t_o_posts); ?></span></a><?php } ?>
+			<?php if(!empty($option['url_trending'])) { ?>	<a class="mt_l_trending <?php if($option['url_trending']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_trending'])); ?>"><?php echo esc_html($t_o_trending); ?> <span><?php echo esc_html($t_o_posts); ?></span></a><?php } ?>
 		</div>
 
 		<?php if(!empty($option['header_link_url'])) { ?>
@@ -181,9 +191,9 @@ add_filter('techpro_logo_mobile','techpro_logo_mobile');
 
 function techpro_nav() {
 	if(class_exists('md_walker_')) {
-		wp_nav_menu( array('theme_location'=>"primary",  'menu_class' => 'sf-menu', 'walker'	=> new md_walker, 'echo' => true, 'depth' => 3));
+		wp_nav_menu( array('theme_location'=>"primary",  'menu_class' => 'sf-menu menu-background mt-radius', 'walker'	=> new md_walker, 'echo' => true, 'depth' => 3));
 	} else {
-		wp_nav_menu( array('theme_location'=>"primary",  'menu_class' => 'sf-menu', 'echo' => true, 'depth' => 3));
+		wp_nav_menu( array('theme_location'=>"primary",  'menu_class' => 'sf-menu menu-background mt-radius', 'echo' => true, 'depth' => 3));
 	}
 }
 add_filter('techpro_nav','techpro_nav');
@@ -232,6 +242,8 @@ function techpro_header_fixed() { ?>
 
 function techpro_header_share() {
 	if (is_single()) {
+		if ( false == get_theme_mod( 't_p_share_on_facebook', false ) ) { $t_p_share_on_facebook = esc_html__("Share on Facebook", "fullstory");  } else { $t_p_share_on_facebook = get_theme_mod( 't_p_share_on_facebook' ); }
+		if ( false == get_theme_mod( 't_p_share_on_twitter', false ) ) { $t_p_share_on_twitter = esc_html__("Tweet on Twitter", "fullstory");  } else { $t_p_share_on_twitter = get_theme_mod( 't_p_share_on_twitter' ); }
 		$url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));	?>
 		<?php $option = get_option("techpro_theme_options"); ?>
 				<div class="fixed-top">
@@ -240,9 +252,9 @@ function techpro_header_share() {
 							<div class="col-md-12">
 
 								<ul class="share">
-									<li class="share-facebook"><a class="mt-radius" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html__('Share on Facebook', 'techpro'); ?></span></a></li>
+									<li class="share-facebook"><a class="mt-radius" href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>" target="_blank"><span><?php echo esc_html($t_p_share_on_facebook); ?></span></a></li>
 									<?php $input = get_the_title().' '.get_the_permalink(); $title = str_replace( ' ', '+', $input ); ?>
-									<li class="share-twitter"><a class="mt-radius" href="http://twitter.com/home/?status=<?php echo esc_attr($title); ?>" target="_blank"><span><?php echo esc_html__('Tweet on Twitter', 'techpro'); ?></span></a></li>
+									<li class="share-twitter"><a class="mt-radius" href="http://twitter.com/home/?status=<?php echo esc_attr($title); ?>" target="_blank"><span><?php echo esc_html($t_p_share_on_twitter); ?></span></a></li>
 									<li class="share-more">
 										<div class="share-more-wrap"><div class="share-more-icon mt-radius">+</div></div>
 										<a class="mt-radius" href="https://plus.google.com/share?url=<?php the_permalink() ?>" target="_blank"><div class="google mt-radius-b"></div></a>
