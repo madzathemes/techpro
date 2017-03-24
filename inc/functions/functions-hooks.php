@@ -383,7 +383,7 @@ function techpro_header_script() {
 
     function techpro_fonts_url() {
 
-      $theme_font = "Lato:400,900,700";
+      $theme_font = "Nunito:200,400,600,700,900";
 
         /*
         Translators: If there are characters in your language that are not supported
