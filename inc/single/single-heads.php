@@ -11,6 +11,14 @@
 <?php function techpro_single_title() { $subtitle = get_post_meta(get_the_ID(), "magazin_subtitle", true); ?>
   <h1 class="single-title"  itemprop="headline"><?php echo get_the_title(); ?></h1>
   <?php if(!empty($subtitle)){ ?><h2 class="single-subtitle" itemprop="description"><?php echo get_post_meta(get_the_ID(), "magazin_subtitle", true); ?></h2><?php } ?>
+  <?php if(function_exists("mt_review_title")) {
+        $review = get_post_meta(get_the_ID(), "magazin_review_in_title", true);
+        if($review=="on"){
+          echo mt_review_title();
+        } else if ( true == get_theme_mod( 'mt_post_title_score', true ) ) {
+          echo mt_review_title();
+        }
+} ?>
 <?php } ?>
 <?php function techpro_single_social() {
 $share_top = "";
@@ -90,5 +98,5 @@ $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
     </div>
     <div class="clearfix"></div>
   </div>
-
+<?php $review = get_post_meta(get_the_ID(), "magazin_review_location", true); if($review=="before"){ if(function_exists("mt_review_title")) { echo mt_review_single(); }} ?>
 <?php } ?>

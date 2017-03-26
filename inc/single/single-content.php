@@ -33,6 +33,7 @@ if ( false == get_theme_mod( 't_p_may_be_intrested', false ) ) { $t_p_may_be_int
 	);
   wp_link_pages( $defaults ); ?>
 </div>
+<?php $review = get_post_meta(get_the_ID(), "magazin_review_location", true); if($review==""){ if(function_exists("mt_review_title")) { echo mt_review_single(); }} ?>
    <div class="tags"><?php echo get_the_tag_list(); ?></div>
    <?php if($share_bottom == "no"){} else if($share_bottom == "yes"){ ?>
    <ul class="share down">
