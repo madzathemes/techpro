@@ -166,7 +166,7 @@ function techpro_logo() {
 		</a>
 	<?php } else { ?>
 		<a class="logo"  href="<?php echo esc_url(home_url('/'));?>">
-			<img src="<?php echo get_template_directory_uri(); ?>/inc/img/logo.png" width="199" height="32" alt="<?php echo the_title(); ?>" />
+			<img src="<?php echo get_template_directory_uri(); ?>/inc/img/logo.png" width="212" height="62" alt="<?php echo the_title(); ?>" />
 		</a>
 	<?php }
 }
