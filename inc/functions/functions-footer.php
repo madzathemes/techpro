@@ -14,13 +14,13 @@
             </div>
             <div class="col-md-4 footer-about">
               <h2><?php echo esc_html__('About Us', 'techpro'); ?></h2>
-              <p><?php echo html_entity_decode(get_theme_mod('techpro_footer_about_us', 'Donec eu tellus convallis, vehicula neque sed, mattis elit. Praesent ornare, ligula in efficitur egestas, massa lacus vulputate enim')); ?> </p>
+              <p><?php echo esc_html(get_theme_mod('techpro_footer_about_us', 'Donec eu tellus convallis, vehicula neque sed, mattis elit. Praesent ornare, ligula in efficitur egestas, massa lacus vulputate enim')); ?> </p>
               <p><?php echo esc_html__('Contact us:', 'techpro'); ?> <a class="mail" href="mailto:<?php echo esc_html(get_theme_mod('techpro_footer_about_us_mail', 'info@techpro.com')); ?>" target="_top"><?php echo esc_html(get_theme_mod('techpro_footer_about_us_mail', 'info@techpro.com')); ?></a></p>
             </div>
             <div class="col-md-5 footer-social">
               <h2><?php echo esc_html__('Follow Us', 'techpro'); ?></h2>
               <?php techpro_socials(); ?>
-              <p><?php echo html_entity_decode(get_theme_mod('techpro_footer_follow_us', 'Donec eu tellus convallis, vehicula neque sed')); ?></p>
+              <p><?php echo esc_html(get_theme_mod('techpro_footer_follow_us', 'Donec eu tellus convallis, vehicula neque sed')); ?></p>
             </div>
           </div>
           <a href="#" class="footer-scroll-to-top-link"></a>
@@ -34,7 +34,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 footer-copyright">
-              <p><?php echo html_entity_decode(get_theme_mod('techpro_copyright_text', 'Copyright 2016. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
+              <p><?php echo esc_html(get_theme_mod('techpro_copyright_text', 'Copyright 2016. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
             </div>
               <div class="col-md-6">
                 <?php wp_nav_menu( array('theme_location'  => "footer_menu", 'container' =>false, 'fallback_cb' => false, 'menu_class' => 'footer-nav', 'menu_id' => '','echo' => true, 'before' => '','after' => '', 'link_before' => '','link_after' => '', 'depth' => 1));  ?>
@@ -109,7 +109,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 footer-copyright">
-              <p><?php echo html_entity_decode(get_theme_mod('techpro_copyright_text', 'Copyright 2016. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
+              <p><?php echo esc_html(get_theme_mod('techpro_copyright_text', 'Copyright 2016. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
             </div>
               <div class="col-md-6">
                 <div class="head-nav">

@@ -47,13 +47,7 @@ else if(!empty($option['menu_background_width'])) {
 	<?php } } ?>
 </div>
 <div class="mt-header-space hide-desktop"></div>
-<?php if  (!empty($optioz['header_ad_top'])) {  ?>
-	<div class="mt-t-ad">
-		<div class="mt-t-ad-in">
-			<?php echo html_entity_decode($optioz['header_ad_top']); ?>
-		</div>
-	</div>
-<?php } ?>
+<?php if(function_exists("mt_header_ad_top")) { mt_header_ad_top(); } ?>
 <div class="header-wrap" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 	<div class="header-mt-container-wrap">
 		<div class="container mt-header-container">
@@ -64,11 +58,7 @@ else if(!empty($option['menu_background_width'])) {
 						<?php if  (!empty($option['menu_top_ad'])) {  ?>
 							<?php if  ($option['menu_top_ad']=="ad") {  ?>
 								<div class="top-ad">
-									<?php if  (!empty($optioz['header_ad_top'])) {  ?>
-								    <div class="text-right">
-								      <?php echo html_entity_decode($optioz['header_ad_top']); ?>
-								    </div>
-								  <?php } ?>
+									<?php if(function_exists("mt_header_ad_top")) { mt_header_ad_top(); } ?>
 								</div>
 							<?php } else { echo techpro_top_content(); } ?>
 						<?php } else { echo techpro_top_content(); } ?>

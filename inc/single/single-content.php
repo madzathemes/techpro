@@ -1,10 +1,5 @@
 <?php function techpro_single_top() {
-$optionz = get_option("magazin_theme_options");
-  if  (!empty($optionz['article_ad_top'])) {  ?>
-    <div class="advertise text-center">
-      <?php echo html_entity_decode($optionz['article_ad_top']); ?>
-    </div>
-  <?php }
+  mt_article_ad_top();
 }
 
 function techpro_single_bottom() {
@@ -101,11 +96,7 @@ if ( false == get_theme_mod( 't_p_may_be_intrested', false ) ) { $t_p_may_be_int
     <?php } ?>
 
    </div>
-   <?php if  (!empty($optionz['article_ad_bottom'])) {  ?>
-     <div class="advertise text-center">
-       <?php echo html_entity_decode($optionz['article_ad_bottom']); ?>
-     </div>
-   <?php } ?>
+   <?php mt_article_ad_bottom(); ?>
 
    <?php if ( true == get_theme_mod( 'mt_post_prev_next_article', true ) ) { ?>
      <ul class="nav-single">

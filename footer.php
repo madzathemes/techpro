@@ -11,14 +11,7 @@
 			<?php } ?>
 		</div>
 
-		<?php if ( true == get_theme_mod( 'mt_footer_ad', true ) ) {  ?>
-			<?php $optionz = get_option("magazin_theme_options");
-			if (!empty($optionz['article_ad_bottom'])) {  ?>
-				<div class="advertise text-center">
-					<?php echo html_entity_decode($optionz['article_ad_bottom']); ?>
-				</div>
-			<?php } ?>
-		<?php } ?>
+		<?php if(function_exists("mt_ad_footer")) { mt_ad_footer(); } ?>
 
 	<?php $option = get_option("techpro_theme_options"); ?>
 	<?php if(!empty($option['footer_page'])){ ?>

@@ -965,7 +965,7 @@ ul.sf-menu > li > ul > li:hover > ul, div.sf-menu > ul > li > ul > li:hover > ul
 }
 .df-is-megamenu ul .poster-cat {
   position: absolute;
-  bottom: 3px;
+  bottom: 20px;
   left: 15px;
   z-index: 999;
 }
