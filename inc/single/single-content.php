@@ -1,5 +1,5 @@
 <?php function techpro_single_top() {
-  mt_article_ad_top();
+  if(function_exists("mt_article_ad_top")) { mt_article_ad_top(); }
 }
 
 function techpro_single_bottom() {
@@ -96,7 +96,7 @@ if ( false == get_theme_mod( 't_p_may_be_intrested', false ) ) { $t_p_may_be_int
     <?php } ?>
 
    </div>
-   <?php mt_article_ad_bottom(); ?>
+   <?php if(function_exists("mt_article_ad_bottom")) { mt_article_ad_bottom(); } ?>
 
    <?php if ( true == get_theme_mod( 'mt_post_prev_next_article', true ) ) { ?>
      <ul class="nav-single">

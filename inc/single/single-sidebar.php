@@ -14,14 +14,14 @@
 
     <?php if ( shortcode_exists( 'posts' ) ) { echo do_shortcode('[posts type=normal title="'. esc_html($t_p_featured_post) .'" title_type="center" offset="0" item_nr=1]'); } ?>
 
-    <?php mt_sidebar_ad_top(); ?>
+    <?php if(function_exists("mt_sidebar_ad_top")) { mt_sidebar_ad_top(); } ?>
 
-    <?php mt_sidebar_ad_middle(); ?>
+    <?php if(function_exists("mt_sidebar_ad_middle")) { mt_sidebar_ad_middle(); } ?>
     <?php if ( shortcode_exists( 'posts_trending' ) ) { ?>
     <h2 class="heading"><span><?php echo esc_html($t_p_trending_posts); ?></span></h2>
     <?php echo do_shortcode('[posts_trending type=trending-normal orderby=shares item_nr=5]'); } ?>
     <div class="space-20"></div>
-    <?php mt_sidebar_ad_bottom(); ?>
+    <?php if(function_exists("mt_sidebar_ad_bottom")) { mt_sidebar_ad_bottom(); } ?>
 
   <?php } ?>
 
