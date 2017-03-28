@@ -73,6 +73,9 @@ a:hover,
 .mt-radius-5 .mt-coment-nav a,
 .mt-radius-5 .poster-small-bottom-wrap,
 .mt-radius-5 .mt-sidebar-in,
+.mt-radius-5 .commentlist article.comment,
+.mt-radius-5 .comment-reply-link,
+.mt-radius-5 .tags a,
 .mtc-border-5  {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -90,6 +93,9 @@ a:hover,
 .mt-radius-25 .mt-coment-nav a,
 .mt-radius-25 .poster-small-bottom-wrap,
 .mt-radius-25 .mt-sidebar-in,
+.mt-radius-25 .commentlist article.comment,
+.mt-radius-25 .comment-reply-link,
+.mt-radius-25 .tags a,
 .mtc-border-25,
 .mct-box:hover:before,
 .mct-box.active:before {
@@ -3361,7 +3367,8 @@ opacity: 0.7
   margin-bottom: 10px;
   position: relative;
   margin-right: 0px;
-  border-bottom: 2px solid whitesmoke;
+  background: whitesmoke;
+  padding: 0px 40px 40px;
 }
 .comment-edit-link {
   font-size: 12px;
@@ -3392,12 +3399,18 @@ opacity: 0.7
 .comment-reply-link {
   right: 0px;
   bottom: 0px;
-  background: whitesmoke;
+  background: white;
   padding: 5px 5px 3px 10px;
   color: #222;
-  font-size: 12px;
+  font-size: 11px;
+  font-weight: 700;
   text-transform: uppercase;
   position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.mt-comment-head {
+  margin-bottom: 20px;
 }
 .comment-author .fn {
   font-size: 16px;
@@ -3419,6 +3432,9 @@ opacity: 0.7
   padding: 20px 40px 40px;
   background: #f1f1f1;
   margin-bottom: 40px;
+}
+.tags {
+  margin: 0 40px;
 }
 .tags a{
   font-size: 12px;
@@ -3509,7 +3525,7 @@ opacity: 0.7
   padding: 40px 0px 10px;
 }
 .footer-bottom {
-  background: white;
+  border-top: 1px solid white;
 }
 .footer-bottom p{
   color: #1f1f1f;
