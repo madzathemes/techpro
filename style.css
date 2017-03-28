@@ -3503,15 +3503,15 @@ opacity: 0.7
 
 /* FOOTER */
 .footer {
-  background: whitesmoke;
   z-index: 9999;
   position: relative;
 }
 .footer-top {
-  padding-bottom: 40px;
 }
 .footer-top .container {
   position: relative;
+  background: whitesmoke;
+  padding-bottom: 40px;
 }
 .footer-top p{
   color: #aeaeae;
@@ -3526,7 +3526,10 @@ opacity: 0.7
   padding: 40px 0px 10px;
 }
 .footer-bottom {
-  border-top: 1px solid white;
+  margin: 20px 0;
+}
+.footer-bottom .container {
+  background: whitesmoke;
 }
 .footer-bottom p{
   color: #1f1f1f;

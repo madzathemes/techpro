@@ -51,7 +51,7 @@
   <?php if  (!empty($option['footer_top'])) {  ?>
     <?php if  ($option['footer_top'] == '1') {  ?>
       <div class="footer-top">
-        <div class="container">
+        <div class="container mt-radius">
           <div class="row">
             <div class="col-md-4 footer-logo">
 
@@ -106,7 +106,7 @@
   <?php if  (!empty($option['footer_bottom'])) { ?>
     <?php if  ($option['footer_bottom'] == '1') { ?>
       <div class="footer-bottom">
-        <div class="container">
+        <div class="container mt-radius">
           <div class="row">
             <div class="col-md-6 footer-copyright">
               <p><?php echo esc_html(get_theme_mod('techpro_copyright_text', 'Copyright 2016. Powered by WordPress Theme. By Madars Bitenieks')); ?></p>
