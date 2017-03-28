@@ -99,7 +99,7 @@ if ( false == get_theme_mod( 't_p_may_be_intrested', false ) ) { $t_p_may_be_int
    <?php if(function_exists("mt_article_ad_bottom")) { mt_article_ad_bottom(); } ?>
 
    <?php if ( true == get_theme_mod( 'mt_post_prev_next_article', true ) ) { ?>
-     <ul class="nav-single">
+     <ul class="nav-single mt-radius">
        <li class="previous pull-left"><?php previous_post_link( '%link', '<span class="color-silver-light">' . esc_html($t_p_previous_article) . '</span><div>%title</div>' ); ?></li>
        <li class="next pull-right"><?php next_post_link( '%link', ' <span class="color-silver-light">' . esc_html($t_p_next_article) . '</span><div>%title</div>' ); ?></li>
        <li class="clearfix"></li>

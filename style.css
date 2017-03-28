@@ -2983,6 +2983,8 @@ opacity: 0.7
   list-style: none;
   padding: 0px;
   margin: 0px 0px 40px 0px;
+  background: whitesmoke;
+  padding: 20px;
 }
 .nav-single .previous {
   padding: 0px 30px;
@@ -3377,7 +3379,7 @@ opacity: 0.7
   border-radius: 25px;
 }
 .comment-content {
-  padding: 20px 0px;
+  padding: 0px 0px;
 }
 .comment-content p {
   margin-right: 20px;
