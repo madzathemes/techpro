@@ -3119,8 +3119,7 @@ opacity: 0.7
   font-size: 17px;
 }
 .entry-meta .author-info {
-  background: #fff !important;
-  border: 2px solid rgba(205, 206, 209, 0.33) !important;
+  background: whitesmoke !important;
 }
 .single-media-title .mt-author-soc a:before   {
   color: white;
