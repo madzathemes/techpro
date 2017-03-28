@@ -690,7 +690,10 @@ blockquote:after {
 .entry-content blockquote {
     font-size: 21px !important;
     font-weight: 700;
-    margin: 10px 80px;
+    margin: 0px 120px 20px 0px;
+    background: whitesmoke;
+    border-radius: 25px;
+    padding: 20px 20px 0px 20px;
 }
 .entry-content ul,
 .entry-content ol{
