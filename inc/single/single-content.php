@@ -118,6 +118,8 @@ if ( false == get_theme_mod( 't_p_may_be_intrested', false ) ) { $t_p_may_be_int
    }
 
    
+    echo do_shortcode('[fbcomments url="http://peadig.com/wordpress-plugins/facebook-comments/" width="375" count="off" num="3" countmsg="wonderful comments!"]'); €
+
    if ( comments_open() || '0' != get_comments_number() ) { comments_template( '', true ); }
 
    if ( is_active_sidebar( 'sidebar-single-bottom-widget-area-after' ) ) {
