@@ -3511,7 +3511,6 @@ opacity: 0.7
 }
 .footer-top .container {
   position: relative;
-  background: whitesmoke;
   padding: 0px 40px 40px!important;
 }
 .footer-top p{
@@ -3525,9 +3524,6 @@ opacity: 0.7
   text-transform: uppercase;
   font-weight: 700;
   padding: 40px 0px 10px;
-}
-.footer-bottom .container {
-  background: whitesmoke;
 }
 .footer-bottom p{
   font-size: 12px;
