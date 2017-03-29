@@ -4534,6 +4534,7 @@ ul.page-numbers li {
     overflow: auto;
     margin: auto;
     width: 100%;
+    background: white;
     -webkit-transition: transform .7s ease!important;
     -moz-transition: transform .7s ease!important;
     -o-transition: transform .7s ease!important;
