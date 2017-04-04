@@ -232,8 +232,8 @@ function techpro_header_fixed() { ?>
 
 function techpro_header_share() {
 	if (is_single()) {
-		if ( false == get_theme_mod( 't_p_share_on_facebook', false ) ) { $t_p_share_on_facebook = esc_html__("Share on Facebook", "fullstory");  } else { $t_p_share_on_facebook = get_theme_mod( 't_p_share_on_facebook' ); }
-		if ( false == get_theme_mod( 't_p_share_on_twitter', false ) ) { $t_p_share_on_twitter = esc_html__("Tweet on Twitter", "fullstory");  } else { $t_p_share_on_twitter = get_theme_mod( 't_p_share_on_twitter' ); }
+		if ( false == get_theme_mod( 't_p_share_on_facebook', false ) ) { $t_p_share_on_facebook = esc_html__("Share on Facebook", "techpro");  } else { $t_p_share_on_facebook = get_theme_mod( 't_p_share_on_facebook' ); }
+		if ( false == get_theme_mod( 't_p_share_on_twitter', false ) ) { $t_p_share_on_twitter = esc_html__("Tweet on Twitter", "techpro");  } else { $t_p_share_on_twitter = get_theme_mod( 't_p_share_on_twitter' ); }
 		$url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));	?>
 		<?php $option = get_option("techpro_theme_options"); ?>
 				<div class="fixed-top">

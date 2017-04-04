@@ -3,7 +3,7 @@
 <div class="mt-container-wrap">
 	<div class="container mt-content-container">
 			<div class="heading-404">
-				<h2><?php esc_html_e( '404', 'techpro' ); ?></h2>
+				<h2><?php esc_html_e( '404 Error', 'techpro' ); ?></h2>
 				<h3><?php echo esc_html($t_p_nothing_found); ?></h3>
 			</div>
 	</div>
