@@ -55,7 +55,7 @@ if ( false == get_theme_mod( 't_p_nothing_found', false ) ) { $t_p_nothing_found
 							<h2 class="entry-title"><?php echo esc_html($t_p_nothing_found); ?></h2>
 							<div class="entry-content">
 								<p><?php echo esc_html($t_p_sorry_search); ?></p>
-
+								<?php get_search_form(); ?>
 							</div>
 						</div>
 		<?php endif; ?>
