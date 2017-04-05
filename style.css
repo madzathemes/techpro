@@ -2582,13 +2582,13 @@ opacity: 0.7
   height: 560px;
 }
 .grid-post.style-3 {
-  width: 32.8%;;
+  width: 32.8%;
 }
 .grid-post.style-3.nr-2 {
-  margin: 0px 10px;
+  margin: 0px 7%;
 }
 .grid-post.nr-2.style-2 {
-  width: 49.5%;
+  width: 49.6%;
 }
 .grid-post.nr-2.style-1 {
   width: 49.7%;
@@ -2679,7 +2679,7 @@ opacity: 0.7
     padding: 0px 20px 20px 20px;
 }
 .grid-post.style-2.nr-2 {
-  margin-left: 0.9%;
+  margin-left: 0.8%;
 }
 
 /* SINGLE */
