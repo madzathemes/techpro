@@ -3815,6 +3815,14 @@ opacity: 0.7
 
 @media all and (max-width: 991px) {
 
+  .footer-top .container {
+    padding: 0px 40px 0px!important;
+  }
+
+  .footer-bottom p {
+    margin-bottom: 20px;
+  }
+
   .head-nav a{
       margin-right: 17px !important;
   }
@@ -4049,6 +4057,10 @@ opacity: 0.7
   .entry-content blockquote {
     margin: 10px 40px;
   }
+  .footer-scroll-to-top {
+    right: 5px;
+    bottom: -15px;
+  }
 }
 
 @media all and (max-width: 645px) {
@@ -4069,7 +4081,8 @@ opacity: 0.7
     padding: 19px 0px 20px 0px;
   }
   .entry-content {
-    padding-right: 0px;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
   }
   .nav-search-wrap {
     position: static;
@@ -4124,7 +4137,13 @@ opacity: 0.7
     display: none;
   }
   .grid-post .layouts {
-    padding: 0px 20px 0px 20px!important;
+    padding: 0px 20px 20px 20px!important;
+  }
+  .poster-carousel {
+    padding: 0px 20px;
+  }
+  .poster.size-normal .poster-content-wrap {
+    margin-left: 0px;
   }
 
   .poster-large-content h2 {
@@ -4143,6 +4162,15 @@ opacity: 0.7
 
 }
 @media all and (max-width: 445px) {
+  .mt-s-i {
+    width: 100%;
+    float:none;
+    text-align: center;
+  }
+  .mt-radius-25 .mt-subscribe-footer .mt-s-b, .mt-radius-5 .mt-subscribe-footer .mt-s-b {
+    width: 100%!important;
+    margin: 5px 0px 20px!important;
+  }
   .grid-post {
     width: 100% !important;
     height: 100px !important;
@@ -4382,6 +4410,10 @@ ul.page-numbers li {
   -webkit-transform: translate(0,0);
   -o-transform: translate(0,0);
   -moz-transform: translate(0,0);
+}
+.admin-bar .mt-header-mobile {
+  position: absolute;
+  width: 100%;
 }
 .nav-down .mt-header-mobile,
 .mt-fixed-always.nav-up.fixed-on .mt-header-mobile {
