@@ -3509,7 +3509,7 @@ opacity: 0.7
 }
 .footer-top .container {
   position: relative;
-  padding: 0px 40px 40px!important;
+  padding: 0px 20px 40px!important;
 }
 .footer-top p{
   color: #aeaeae;
@@ -3528,7 +3528,7 @@ opacity: 0.7
   font-weight: 600;
   line-height: 1;
   display: inline-block;
-  padding: 20px 20px;
+  padding: 20px 0px;
 }
 .footer-nav {
   list-style: none;
@@ -3816,7 +3816,7 @@ opacity: 0.7
 @media all and (max-width: 991px) {
 
   .footer-top .container {
-    padding: 0px 40px 0px!important;
+    padding: 0px 20px 0px!important;
   }
 
   .footer-bottom p {
