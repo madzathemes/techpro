@@ -1268,7 +1268,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   background: whitesmoke;
 }
 .menu-background-mobile {
-  background: #fff;
+  background: #f5f5f5;
 }
 .top-nav {
   color: #19191a;
@@ -1572,7 +1572,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   top: 8px;
 }
 .mt-header-mobile.search-on .nav-search-wrap:hover {
-  background: white;
+  background: #f5f5f5;
 }
 .active.search-on .nav {
   white-space: nowrap;
@@ -1612,11 +1612,11 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 }
 .mt-header-mobile .nav-search-input {
   left: 0px;
-  background: white;
+  background: #f5f5f5;
   width: 100%;
 }
 .mt-header-mobile .nav-search-input input {
-  background: white;
+  background: #f5f5f5;
   line-height: 54px;
   padding: 0px 40px;
 }
