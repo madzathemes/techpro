@@ -49,32 +49,6 @@ function techpro_customize_footer($wp_customize){
 				'priority' => 301,
 		));
 
-		Kirki::add_field( 'mt_footer_hot_post', array(
-      	'type'        => 'switch',
-      	'settings'    => 'mt_footer_hot_post',
-      	'label'       => esc_attr__( 'Footer Hot Post Widget', 'techpro' ),
-				'description'       => esc_attr__( 'To customize footer Hot Post area you need go to Appearance/Widgets/Footer Hot Post Widget. And insert inside this widget area "mt Trending Posts" widget', 'techpro' ),
-      	'section'     => 'techpro_footer_bottom',
-      	'default'     => 'on',
-      	'priority'    => 10,
-      	'choices'     => array(
-          'on'  => esc_attr__( 'ON', 'techpro' ),
-       		'off' => esc_attr__( 'OFF', 'techpro' ),
-      	),
-    ) );
-
-		Kirki::add_field( 'mt_footer_ad', array(
-      	'type'        => 'switch',
-      	'settings'    => 'mt_footer_ad',
-      	'label'       => esc_attr__( 'Footer Ad', 'techpro' ),
-      	'section'     => 'techpro_footer_bottom',
-      	'default'     => 'on',
-      	'priority'    => 10,
-      	'choices'     => array(
-          'on'  => esc_attr__( 'ON', 'techpro' ),
-       		'off' => esc_attr__( 'OFF', 'techpro' ),
-      	),
-    ) );
 
 		Kirki::add_field( 'mt_footer_subscribe', array(
       	'type'        => 'switch',
