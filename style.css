@@ -5408,3 +5408,13 @@ li.mtc-buy {
   margin: 0px;
   background: none!important;
 }
+
+
+
+/* Megamenu UPDATE */
+.df-block-megamenu .tab-panel {
+  display: none;
+}
+.df-block-megamenu .tab-panel.in {
+  display: block;
+}
