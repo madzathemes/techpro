@@ -5412,9 +5412,25 @@ li.mtc-buy {
 
 
 /* Megamenu UPDATE */
-.df-block-megamenu .tab-panel {
-  display: none;
+.df-block-megamenu .tab-pane { display: none; }
+.df-block-megamenu .tab-pane.in { display: block; }
+.df-container-tab-content .mega-5 { width: 25%; }
+.df-subcat-stack { width: 20%!important; }
+.df-container-tab-content { width: 80%!important; }
+.nave.df-megamenu-nav-sub {
+  left: 0;
+  min-width: inherit;
+  position: relative;
+  width: auto;
+  padding: 20px !important;
 }
-.df-block-megamenu .tab-panel.in {
-  display: block;
+.nave.df-megamenu-nav-sub a.mt-sub-cat-a {
+  padding: 3px 10px!important;
+}
+.nave.df-megamenu-nav-sub .active a.mt-sub-cat-a {
+  background: #2196f3!important;
+  color: white!important;
+}
+.tab-pane .mega-post-wrap {
+  padding-bottom: 0px;
 }

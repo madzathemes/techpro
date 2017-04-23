@@ -61,6 +61,14 @@ jQuery(document).ready(function() {
     jQuery('.'+tab).addClass("active");
   });
 
+  jQuery(".df-megamenu-nav-sub li a").on("hover", function() {
+    var tab_mega = jQuery(this).data( "target" );
+    jQuery(".df-container-tab-content .tab-pane").removeClass("in");
+    jQuery(".df-megamenu-nav-sub li").removeClass("active");
+    jQuery(tab_mega).addClass("in");
+    jQuery(this).parent().addClass("active");
+  });
+
   jQuery('.zoom, .lightbox').magnificPopup({
     type:'image',
     gallery:{enabled:true,navigateByImgClick: true,
