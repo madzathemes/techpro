@@ -35,7 +35,8 @@ function techpro_css() {
 			.single-cat-wrap .post-categories li a,
 			.mt-load-more:hover,
 			.mt-tabc:before,
-			.mt-subscribe-footer input.mt-s-b:hover { background: '. esc_attr($options['colors_default']) .'; }';
+			.mt-subscribe-footer input.mt-s-b:hover,
+			.nave.df-megamenu-nav-sub .active a.mt-sub-cat-a { background: '. esc_attr($options['colors_default']) .'; }';
 	 }
 
 	 // Button Color
@@ -153,7 +154,8 @@ function techpro_css() {
 	 			ul.sf-menu ul li.current-menu-item > a, div.sf-menu ul ul ul li.current-menu-item > a,
 	 			ul.sf-menu ul li.current_page_item > a, div.sf-menu ul ul ul li.current_page_item > a,
 	 			ul.sf-menu ul li.current-menu-ancestor > a, div.sf-menu ul ul ul li.current-menu-ancestor > a,
-	 			ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover { ';
+	 			ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover,
+				.nave.df-megamenu-nav-sub .active a.mt-sub-cat-a { ';
 					 if(!empty($options_in['background_hover'])){ $custom_styles .='background:'. esc_attr($options_in['background_hover']) .'!important;'; }
 					 if(!empty($options_in['text_hover'])){ $custom_styles .='color:'. esc_attr($options_in['text_hover']) .'!important;'; }
 				$custom_styles .='}';

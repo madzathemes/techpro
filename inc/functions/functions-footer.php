@@ -113,10 +113,17 @@
             </div>
               <div class="col-md-6">
                 <div class="head-nav">
-            			<?php if(!empty($option['url_latest'])) { ?><a class="mt_l_latest <?php if($option['url_latest']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_latest'])); ?>"><?php esc_html_e( 'LATEST', 'techpro' ); ?> <span><?php esc_html_e( 'Posts', 'techpro' ); ?></span></a><?php } ?>
-            			<?php if(!empty($option['url_popular'])) { ?><a class="mt_l_popular <?php if($option['url_popular']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_popular'])); ?>"><?php esc_html_e( 'POPULAR', 'techpro' ); ?> <span><?php esc_html_e( 'Posts', 'techpro' ); ?></span></a><?php } ?>
-            			<?php if(!empty($option['url_hot'])) { ?><a class="mt_l_hot <?php if($option['url_hot']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_hot'])); ?>"><?php esc_html_e( 'HOT', 'techpro' ); ?> <span><?php esc_html_e( 'Posts', 'techpro' ); ?></span></a><?php } ?>
-            			<?php if(!empty($option['url_trending'])) { ?>	<a class="mt_l_trending <?php if($option['url_trending']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_trending'])); ?>"><?php esc_html_e( 'TRENDING', 'techpro' ); ?> <span><?php esc_html_e( 'Posts', 'techpro' ); ?></span></a><?php } ?>
+                  <?php
+                  if ( false == get_theme_mod( 't_o_latest', false ) ) { $t_o_latest = esc_html__("LATEST", "techpro");  } else { $t_o_latest = get_theme_mod( 't_o_latest' ); }
+                  if ( false == get_theme_mod( 't_o_popular', false ) ) { $t_o_popular = esc_html__("POPULAR", "techpro");  } else { $t_o_popular = get_theme_mod( 't_o_popular' ); }
+                  if ( false == get_theme_mod( 't_o_hot', false ) ) { $t_o_hot = esc_html__("HOT", "techpro");  } else { $t_o_hot = get_theme_mod( 't_o_hot' ); }
+                  if ( false == get_theme_mod( 't_o_trending', false ) ) { $t_o_trending = esc_html__("TRENDING", "techpro");  } else { $t_o_trending = get_theme_mod( 't_o_trending' ); }
+                  if ( false == get_theme_mod( 't_o_posts', false ) ) { $t_o_posts = esc_html__("Posts", "techpro");  } else { $t_o_posts = get_theme_mod( 't_o_posts' ); }
+                  ?>
+                  <?php if(!empty($option['url_latest'])) { ?><a class="mt_l_latest <?php if($option['url_latest']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_latest'])); ?>"><?php echo esc_html($t_o_latest); ?> <span><?php echo esc_html($t_o_posts); ?></span></a><?php } ?>
+            			<?php if(!empty($option['url_popular'])) { ?><a class="mt_l_popular <?php if($option['url_popular']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_popular'])); ?>"><?php echo esc_html($t_o_popular); ?> <span><?php echo esc_html($t_o_posts); ?></span></a><?php } ?>
+            			<?php if(!empty($option['url_hot'])) { ?><a class="mt_l_hot <?php if($option['url_hot']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_hot'])); ?>"><?php echo esc_html($t_o_hot); ?> <span><?php echo esc_html($t_o_posts); ?></span></a><?php } ?>
+            			<?php if(!empty($option['url_trending'])) { ?>	<a class="mt_l_trending <?php if($option['url_trending']==get_the_ID()) { ?>active<?php } ?>" href="<?php echo get_permalink(esc_html($option['url_trending'])); ?>"><?php echo esc_html($t_o_trending); ?> <span><?php echo esc_html($t_o_posts); ?></span></a><?php } ?>
             		</div>
               </div>
             </div>
