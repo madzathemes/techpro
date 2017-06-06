@@ -1690,6 +1690,7 @@ h2.heading span {
 .social-text {
   float: right;
 }
+
 .social-facebook { background: #2d5f9a; }
 .social-facebook:before { content: "\77"; }
 .social-twitter { background: #2ecff8; }
