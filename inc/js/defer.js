@@ -120,29 +120,15 @@ jQuery(document).ready(function() {
     return false;
   });
 
+  var elem = jQuery(".single-content .entry-content > p:first-child").contents().filter(function () { return this.nodeType == 3 }).first(),
+     text = elem.text().trim(),
+     first = text.slice(0, 1);
 
+ if (!elem.length)
+     return;
 
-      //Function to add commas to the thousandths
-      jQuery.fn.digits = function(){
-        return this.each(function(){
-          jQuery(this).text( jQuery(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,') );
-        })
-      }
-      //Function to add K to thousands
-      function kFormatter(num) {
-        return num > 999 ? (num/1000).toFixed(1) + 'k' : num;
-      }
-
-
-      var elem = jQuery(".single-content .entry-content > p:first-child").contents().filter(function () { return this.nodeType == 3 }).first(),
-         text = elem.text().trim(),
-         first = text.slice(0, 1);
-
-     if (!elem.length)
-         return;
-
-     elem[0].nodeValue = text.slice(first.length);
-     elem.before('<span class="mt-first-letter">' + first + '</span>');
+ elem[0].nodeValue = text.slice(first.length);
+ elem.before('<span class="mt-first-letter">' + first + '</span>');
 
 
 });
