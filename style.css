@@ -1217,7 +1217,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
 .mt_l_hot:before,
 .mt_l_popular:before,
 .mt_l_latest:before {
-  content: "\e916";
+  content: "\e91b";
   font-family: "madza";
   position: absolute;
   margin-left: -11px;
@@ -1232,7 +1232,7 @@ ul.sf-menu ul li a:hover, div.sf-menu ul ul li a:hover {
   color: #ff0036;
 }
 .mt_l_popular:before {
-  content: "\e915";
+  content: "\e91a";
   color: #ffc600;
 }
 .mt_l_latest:before {
@@ -3180,7 +3180,7 @@ opacity: 0.7
   color: #000113;
 }
 .stat-shares:before {
-    content: "\e916";
+    content: "\e91b";
     font-family: "madza";
     position: absolute;
     margin-top: 8px;
