@@ -50,21 +50,6 @@ function techpro_customize_footer($wp_customize){
 		));
 
 
-		Kirki::add_field( 'mt_footer_subscribe', array(
-      	'type'        => 'switch',
-      	'settings'    => 'mt_footer_subscribe',
-      	'label'       => esc_attr__( 'Footer Subscribe', 'techpro' ),
-				'description'       => esc_attr__( 'To activate this subscription form, You only need register your domain on www.specificfeeds.com', 'techpro' ),
-      	'section'     => 'techpro_footer_bottom',
-      	'default'     => 'on',
-      	'priority'    => 10,
-      	'choices'     => array(
-          'on'  => esc_attr__( 'ON', 'techpro' ),
-       		'off' => esc_attr__( 'OFF', 'techpro' ),
-      	),
-    ) );
-
-
 
 		// FOOTER PAGE SORCE
 		$wp_customize->add_setting('techpro_theme_options[footer_page]', array(
@@ -313,5 +298,19 @@ function techpro_customize_footer($wp_customize){
 }
 
 add_action('customize_register', 'techpro_customize_footer');
+
+Kirki::add_field( 'mt_footer_subscribe', array(
+		'type'        => 'switch',
+		'settings'    => 'mt_footer_subscribe',
+		'label'       => esc_attr__( 'Footer Subscribe', 'techpro' ),
+		'description'       => esc_attr__( 'To activate this subscription form, You only need register your domain on www.specificfeeds.com', 'techpro' ),
+		'section'     => 'techpro_footer_bottom',
+		'default'     => 'on',
+		'priority'    => 10,
+		'choices'     => array(
+			'on'  => esc_attr__( 'ON', 'techpro' ),
+			'off' => esc_attr__( 'OFF', 'techpro' ),
+		),
+) );
 
 ?>
